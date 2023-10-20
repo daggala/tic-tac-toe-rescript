@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "@rescript/react": "^0.11.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-scripts": "^5.0.0",
+    "rescript": "11.0.0-rc.4"
+  },
+  "main": "/index.js",
+  "name": "vy6j3f",
+  "description": "Tic tac toe Rescript",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "res:build": "rescript",
+    "res": "rescript build -w"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

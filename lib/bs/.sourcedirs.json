@@ -1,0 +1,1 @@
+{ "dirs" : [ "src" , "src/public" ] , "pkgs" : [ [ "@rescript/react" , "/Users/daggala/test/rescript-tic-tac-toe/node_modules/@rescript/react" ] ] , "generated" : [] }

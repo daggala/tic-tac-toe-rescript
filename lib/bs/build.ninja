@@ -1,0 +1,14 @@
+rescript = 1
+g_finger := /Users/daggala/test/rescript-tic-tac-toe/node_modules/@rescript/react/lib/ocaml/install.stamp
+rule astj
+  command = /Users/daggala/test/rescript-tic-tac-toe/node_modules/.pnpm/rescript@11.0.0-rc.4/node_modules/rescript/darwinarm64/bsc.exe  -bs-v 11.0.0-rc.4 -bs-jsx 4 -bs-jsx-mode classic -uncurried  -absname -bs-ast -o $out $i
+o src/App.ast : astj ../../src/App.res
+rule deps
+  command = /Users/daggala/test/rescript-tic-tac-toe/node_modules/.pnpm/rescript@11.0.0-rc.4/node_modules/rescript/darwinarm64/bsb_helper.exe -hash 3222f42abd73215b0bf5b80a2900245f $in
+  restat = 1
+o src/App.d : deps src/App.ast
+rule mij
+  command = /Users/daggala/test/rescript-tic-tac-toe/node_modules/.pnpm/rescript@11.0.0-rc.4/node_modules/rescript/darwinarm64/bsc.exe -I src/public -I src -I /Users/daggala/test/rescript-tic-tac-toe/node_modules/@rescript/react/lib/ocaml   -uncurried -bs-package-name 'Tic tac toe rescript' -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o src/App.cmj src/App.cmi ../../src/App.bs.js : mij src/App.ast
