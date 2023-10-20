@@ -6,34 +6,40 @@ function toString(squareType) {
   return squareType;
 }
 
-function App$Field(props) {
-  var _type = props._type;
-  if (_type === "square") {
-    return React.createElement("button", {
-                className: _type
-              }, "X");
-  } else {
-    return React.createElement("button", {
-                className: _type
-              }, "O");
-  }
+function App$Square(props) {
+  return React.createElement("button", {
+              className: "square"
+            });
 }
 
-var Field = {
+var Square = {
   toString: toString,
-  make: App$Field
+  make: App$Square
+};
+
+function App$Board(props) {
+  return React.createElement("div", undefined, React.createElement("div", {
+                  className: "board-row"
+                }, React.createElement(App$Square, {}), React.createElement(App$Square, {}), React.createElement(App$Square, {})), React.createElement("div", {
+                  className: "board-row"
+                }, React.createElement(App$Square, {}), React.createElement(App$Square, {}), React.createElement(App$Square, {})), React.createElement("div", {
+                  className: "board-row"
+                }, React.createElement(App$Square, {}), React.createElement(App$Square, {}), React.createElement(App$Square, {})));
+}
+
+var Board = {
+  make: App$Board
 };
 
 function App$default(props) {
-  return React.createElement(App$Field, {
-              _type: "square"
-            });
+  return React.createElement("div", undefined);
 }
 
 var $$default = App$default;
 
 export {
-  Field ,
+  Square ,
+  Board ,
   $$default as default,
 }
 /* react Not a pure module */

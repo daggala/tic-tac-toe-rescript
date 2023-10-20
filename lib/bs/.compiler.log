@@ -1,2 +1,9 @@
-#Start(1697831598787)
-#Done(1697831598832)
+#Start(1697833444999)
+
+  We've found a bug for you!
+  /Users/daggala/test/rescript-tic-tac-toe/src/App.res
+
+  Empty record literal {} should be type annotated or used in a record context.
+
+FAILED: cannot make progress due to previous errors.
+#Done(1697833445042)
